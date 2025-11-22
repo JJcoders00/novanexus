@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Nexus | Simply Illuminating - Thodupuzha</title>
+    <!-- Primary Meta Tags -->
+
+
+<meta name="description" content="Light & Light (Nova Nexus) is Thodupuzha’s trusted store for LED lights, chandelier lights, interior lighting, Luker & Fybros products, electrical works, inverter batteries, Amaron batteries, CCTV, plumbing, and incinerators. Premium quality materials, expert installation & fast service.">
+
+<meta name="keywords" content="LED lights Thodupuzha, chandelier lights Thodupuzha, interior lighting Thodupuzha, ceiling lights Thodupuzha, Luker lights Thodupuzha, Fybros lighting, hanging lights Thodupuzha, inverter shop Thodupuzha, Amaron battery Thodupuzha, inverter batteries Thodupuzha, electric shop Thodupuzha, interior design lighting Thodupuzha, incinerators manufacturer Thodupuzha, Nova Nexus, Nova Nexus Thodupuzha, Light & Light">
+
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Light & Light / Nova Nexus">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="Light & Light | LED Lights, Chandelier Lights, Interior Lighting & Inverter Shop in Thodupuzha">
+<meta property="og:description" content="Thodupuzha’s trusted lighting and electrical store – LED lights, chandelier lights, Luker lights, Fybros, electrical works, inverter batteries, Amaron batteries, CCTV, plumbing & incinerators.">
+<meta property="og:image" content="https://jjcoders00.github.io/novanexus/logo.png">
+<meta property="og:url" content="https://jjcoders00.github.io/novanexus">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Light & Light | Nova Nexus">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Light & Light – LED Lights, Interior Lighting & Inverter Shop Thodupuzha">
+<meta name="twitter:description" content="Top-quality LED lighting, chandeliers, Fybros, Luker lights, inverter batteries, Amaron batteries, and electrical supplies in Thodupuzha.">
+<meta name="twitter:image" content="https://jjcoders00.github.io/novanexus/logo.png">
+
+<!-- Local SEO Schema (Improves Rank for Thodupuzha) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Light & Light - Nova Nexus Thodupuzha",
+  "image": "https://jjcoders00.github.io/novanexus/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Shakkena Complex, Near Head Post Office",
+    "addressLocality": "Thodupuzha",
+    "addressRegion": "Kerala",
+    "postalCode": "685584",
+    "addressCountry": "IN"
+  },
+  "url": "https://jjcoders00.github.io/novanexus",
+  "telephone": "+918129412434",
+  "priceRange": "₹₹",
+  "openingHours": "Mo-Sa 09:00-18:00",
+  "description": "Trusted LED lights, chandelier lights, interior lighting, Luker lights, Fybros electricals, inverter batteries, Amaron batteries, CCTV, electrical works, plumbing, and incinerators in Thodupuzha.",
+  "servesCuisine": "",
+  "sameAs": [
+    "https://facebook.com/yourpage",
+    "https://instagram.com/yourpage"
+  ]
+}
+</script>
+
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#080808',
+                            dark: '#121212',
+                            cyan: '#22d3ee', // Matching the Logo teal/cyan
+                            gold: '#fbbf24'  // Matching the warm light glow
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #22d3ee; }
+
+        /* Glassmorphism */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* 3D Tilt Effect */
+        .tilt-card {
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+            transition: transform 0.1s ease-out;
+        }
+        .tilt-content {
+            transform: translateZ(20px);
+        }
+
+        /* Text Stroke for "Outline" look */
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+            color: transparent;
+        }
+        
+        /* Glow Animation */
+        @keyframes glow {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        .animate-glow {
+            animation: glow 4s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-cyan selection:text-black">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 p-4 md:p-6 bg-black/50 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 border-2 border-brand-cyan flex flex-col items-center justify-center relative overflow-hidden bg-black">
+                    <img src="logo.png">
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-xl tracking-wider text-white group-hover:text-brand-cyan transition-colors">NOVA NEXUS</span>
+                    <span class="text-[10px] tracking-[0.2em] text-gray-400 uppercase">We Empower Your Dreams</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#services" class="text-sm font-medium hover:text-brand-cyan transition-colors">Services</a>
+                <a href="#products" class="text-sm font-medium hover:text-brand-cyan transition-colors">Products</a>
+                <a href="#brands" class="text-sm font-medium hover:text-brand-cyan transition-colors">Partners</a>
+                <a href="#contact" class="text-sm font-medium hover:text-brand-cyan transition-colors">Contact</a>
+            </div>
+
+            <!-- CTA -->
+            <a href="tel:+918129412434" class="hidden md:flex items-center gap-2 bg-brand-cyan text-black px-5 py-2.5 rounded-full font-bold text-sm hover:bg-white transition-all duration-300 shadow-[0_0_15px_rgba(34,211,238,0.4)]">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                <span>+91 81294 12434</span>
+            </a>
+            
+             <!-- Mobile Menu Icon -->
+             <button class="md:hidden text-white">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+             </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Background Glows -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-brand-cyan/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-brand-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Text Content -->
+            <div class="text-left space-y-8">
+                <div class="inline-block px-4 py-1 border border-brand-cyan/30 rounded-full bg-brand-cyan/5 backdrop-blur-sm">
+                    <span class="text-brand-cyan text-xs font-bold tracking-widest uppercase">Thodupuzha's Premium Electrical Store</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tight">
+                    SIMPLY <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-cyan to-white bg-300% animate-gradient">ILLUMINATING</span>
+                </h1>
+                
+                <p class="text-xl text-gray-400 max-w-md leading-relaxed font-light">
+                    One stop destination for your entire electrical shopping. From <span class="text-white font-medium">LED Lighting</span> to <span class="text-white font-medium">Heavy Electricals</span>.
+                </p>
+
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#contact" class="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-brand-cyan transition-colors duration-300">
+                        Visit Showroom
+                    </a>
+                    <a href="https://wa.me/918129412434" class="px-8 py-4 border border-white/20 hover:border-brand-cyan text-white font-medium rounded-full transition-colors duration-300">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+
+            <!-- Visual Hero Image (Parallax) -->
+            <div class="relative h-[500px] md:h-[700px] w-full flex items-center justify-center parallax-wrapper">
+                <!-- Using a placeholder image that resembles the ad's pendant lights -->
+                <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?q=80&w=1000&auto=format&fit=crop" 
+                     alt="Premium Hanging Lights" 
+                     class="absolute w-full h-full object-cover rounded-2xl opacity-60 mix-blend-screen mask-image-fade"
+                     style="mask-image: linear-gradient(to bottom, black 50%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);">
+                
+                <div class="absolute z-20 bg-black/80 backdrop-blur-md p-6 rounded-xl border border-white/10 bottom-20 -left-10 shadow-2xl max-w-xs card-float">
+                    <div class="flex items-center gap-4 mb-3">
+                        <div class="p-2 bg-brand-cyan/20 rounded-lg">
+                            <i data-lucide="trophy" class="text-brand-cyan w-6 h-6"></i>
+                        </div>
+                        <span class="font-bold text-white">Specialist Service</span>
+                    </div>
+                    <p class="text-sm text-gray-400" style="text-align: center;">premium interior lighting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION (From Ad Details) -->
+    <section id="services" class="py-24 relative bg-[#0a0a0a]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Our <span class="text-brand-cyan">Collections</span></h2>
+                <p class="text-gray-400">Exquisite Collection of Premium, Medium & Budget Brands</p>
+                <div class="h-1 w-20 bg-brand-cyan mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 max-w-6xl mx-auto">
+
+
+                <!-- LIGHTING WORKS -->
+<div class="tilt-card glass-panel p-8 md:p-12 rounded-3xl group hover:border-brand-cyan/50 transition-colors cursor-default relative overflow-hidden">
+    <div class="absolute top-0 right-0 p-32 bg-brand-cyan/5 blur-3xl rounded-full -mr-16 -mt-16 transition-all duration-500 group-hover:bg-brand-cyan/10"></div>
+
+    <div class="tilt-content relative z-10">
+        <div class="flex items-center justify-between mb-8">
+            <h3 class="text-3xl font-bold font-serif italic">Lighting Works</h3>
+            <i data-lucide="lightbulb" class="w-10 h-10 text-brand-cyan"></i>
+        </div>
+
+        <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-gray-300">
+                <span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span>
+                Indoor & Outdoor Lighting Setup
+            </li>
+            <li class="flex items-center gap-3 text-gray-300">
+                <span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span>
+                Architectural Lighting Installation
+            </li>
+            <li class="flex items-center gap-3 text-gray-300">
+                <span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span>
+                LED Upgrades & Modernization
+            </li>
+            <li class="flex items-center gap-3 text-brand-cyan font-bold bg-brand-cyan/10 p-3 -mx-3 rounded-lg">
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                Complete Lighting Project Execution
+            </li>
+        </ul>
+    </div>
+</div>
+
+                
+               <!-- ELECTRIC MATERIAL SUPPLY -->
+<div class="tilt-card glass-panel p-8 md:p-12 rounded-3xl group hover:border-brand-cyan/50 transition-colors cursor-default relative overflow-hidden">
+    <div class="absolute top-0 right-0 p-32 bg-brand-cyan/5 blur-3xl rounded-full -mr-16 -mt-16 transition-all duration-500 group-hover:bg-brand-cyan/10"></div>
+
+    <div class="tilt-content relative z-10">
+        <div class="flex items-center justify-between mb-8">
+            <h3 class="text-3xl font-bold font-serif italic">Electric Material Supply</h3>
+            <i data-lucide="package" class="w-10 h-10 text-brand-cyan"></i>
+        </div>
+
+        <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span> All Electrical Components</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span> Industrial & Domestic Supply</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span> Commercial Wiring Materials</li>
+            <li class="flex items-center gap-3 text-brand-cyan font-bold bg-brand-cyan/10 p-3 -mx-3 rounded-lg">
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                Bulk & Retail Supply Available
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- ELECTRIC & PLUMBING WORKS -->
+<div class="tilt-card glass-panel p-8 md:p-12 rounded-3xl group hover:border-brand-gold/50 transition-colors cursor-default relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 p-32 bg-brand-gold/5 blur-3xl rounded-full -ml-16 -mb-16 transition-all duration-500 group-hover:bg-brand-gold/10"></div>
+
+    <div class="tilt-content relative z-10">
+        <div class="flex items-center justify-between mb-8">
+            <h3 class="text-3xl font-bold font-serif italic">Electric & Plumbing Works</h3>
+            <i data-lucide="wrench" class="w-10 h-10 text-brand-gold"></i>
+        </div>
+
+        <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> Electrical Installation</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> Plumbing Installation</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> Maintenance & Repair</li>
+            <li class="flex items-center gap-3 text-brand-gold font-bold bg-brand-gold/10 p-3 -mx-3 rounded-lg">
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                Full Residential & Commercial Service
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- INCINERATORS -->
+<div class="tilt-card glass-panel p-8 md:p-12 rounded-3xl group hover:border-brand-cyan/50 transition-colors cursor-default relative overflow-hidden">
+    <div class="absolute top-0 left-0 p-32 bg-brand-cyan/5 blur-3xl rounded-full -ml-16 -mt-16 transition-all duration-500 group-hover:bg-brand-cyan/10"></div>
+
+    <div class="tilt-content relative z-10">
+        <div class="flex items-center justify-between mb-8">
+            <h3 class="text-3xl font-bold font-serif italic">Incinerators</h3>
+            <i data-lucide="flame" class="w-10 h-10 text-brand-cyan"></i>
+        </div>
+
+        <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span> Waste Burning Units</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span> Installation & Setup</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span> Maintenance Service</li>
+            <li class="flex items-center gap-3 text-brand-cyan font-bold bg-brand-cyan/10 p-3 -mx-3 rounded-lg">
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                Eco-Friendly Units
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- INVERTER SALES & SERVICE -->
+<div class="tilt-card glass-panel p-8 md:p-12 rounded-3xl group hover:border-brand-gold/50 transition-colors cursor-default relative overflow-hidden">
+    <div class="absolute right-0 bottom-0 p-32 bg-brand-gold/5 blur-3xl rounded-full -mr-16 -mb-16 transition-all duration-500 group-hover:bg-brand-gold/10"></div>
+
+    <div class="tilt-content relative z-10">
+        <div class="flex items-center justify-between mb-8">
+            <h3 class="text-3xl font-bold font-serif italic">Inverter Sales & Service</h3>
+            <i data-lucide="battery-charging" class="w-10 h-10 text-brand-gold"></i>
+        </div>
+
+        <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> Home Inverters</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> Battery Systems</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> Full Service & Repair</li>
+            <li class="flex items-center gap-3 text-brand-gold font-bold bg-brand-gold/10 p-3 -mx-3 rounded-lg">
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                Reliable Power Solutions
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- WATER PURIFIER -->
+<div class="tilt-card glass-panel p-8 md:p-12 rounded-3xl group hover:border-brand-cyan/50 transition-colors cursor-default relative overflow-hidden">
+    <div class="absolute top-0 right-0 p-32 bg-brand-cyan/5 blur-3xl rounded-full -mr-16 -mt-16 transition-all duration-500 group-hover:bg-brand-cyan/10"></div>
+
+    <div class="tilt-content relative z-10">
+        <div class="flex items-center justify-between mb-8">
+            <h3 class="text-3xl font-bold font-serif italic">Water Purifier</h3>
+            <i data-lucide="droplet" class="w-10 h-10 text-brand-cyan"></i>
+        </div>
+
+        <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span> RO Systems</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span> UV/UF Filters</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span> Installation & Service</li>
+            <li class="flex items-center gap-3 text-brand-cyan font-bold bg-brand-cyan/10 p-3 -mx-3 rounded-lg">
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                Pure Drinking Water Guaranteed
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- CCTV -->
+<div class="tilt-card glass-panel p-8 md:p-12 rounded-3xl group hover:border-brand-gold/50 transition-colors cursor-default relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 p-32 bg-brand-gold/5 blur-3xl rounded-full -ml-16 -mb-16 transition-all duration-500 group-hover:bg-brand-gold/10"></div>
+
+    <div class="tilt-content relative z-10">
+        <div class="flex items-center justify-between mb-8">
+            <h3 class="text-3xl font-bold font-serif italic">CCTV</h3>
+            <i data-lucide="camera" class="w-10 h-10 text-brand-gold"></i>
+        </div>
+
+        <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> CCTV Installation</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> Surveillance Setup</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> Maintenance & Support</li>
+            <li class="flex items-center gap-3 text-brand-gold font-bold bg-brand-gold/10 p-3 -mx-3 rounded-lg">
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                Complete Security Solutions
+            </li>
+        </ul>
+    </div>
+</div>
+
+                </div>
+
+               
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BRANDS MARQUEE (From Google Profile) -->
+    <section id="brands" class="py-16 border-y border-white/5 bg-black relative overflow-hidden">
+        <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10"></div>
+        <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10"></div>
+        
+        <div class="flex whitespace-nowrap animate-marquee gap-12 items-center">
+            <!-- Item Set 1 -->
+            <span class="text-4xl md:text-6xl font-black text-stroke opacity-30 uppercase px-4">Schneider</span>
+            <span class="text-4xl md:text-6xl font-black text-stroke opacity-30 uppercase px-4">Luker</span>
+            <span class="text-4xl md:text-6xl font-black text-stroke opacity-30 uppercase px-4">Fybros</span>
+            <span class="text-4xl md:text-6xl font-black text-stroke opacity-30 uppercase px-4">V-Guard</span>
+            <span class="text-4xl md:text-6xl font-black text-stroke opacity-30 uppercase px-4">GM</span>
+            <span class="text-4xl md:text-6xl font-black text-stroke opacity-30 uppercase px-4">Legrand</span>
+            <span class="text-4xl md:text-6xl font-black text-stroke opacity-30 uppercase px-4">Finolex</span>
+            <span class="text-4xl md:text-6xl font-black text-stroke opacity-30 uppercase px-4">Incinerator</span>
+            <!-- Item Set 2 (Repeat) -->
+            <span class="text-4xl md:text-6xl font-black text-stroke opacity-30 uppercase px-4">Schneider</span>
+            <span class="text-4xl md:text-6xl font-black text-stroke opacity-30 uppercase px-4">Luker</span>
+            <span class="text-4xl md:text-6xl font-black text-stroke opacity-30 uppercase px-4">Fybros</span>
+            <span class="text-4xl md:text-6xl font-black text-stroke opacity-30 uppercase px-4">V-Guard</span>
+            <span class="text-4xl md:text-6xl font-black text-stroke opacity-30 uppercase px-4">GM</span>
+            <span class="text-4xl md:text-6xl font-black text-stroke opacity-30 uppercase px-4">Legrand</span>
+        </div>
+    </section>
+
+    <!-- GALLERY / SHOWCASE -->
+    <section class="py-24 bg-brand-dark">
+        <div class="container mx-auto px-6">
+             <div class="flex justify-between items-end mb-12">
+                <h2 class="text-3xl font-bold">Store <span class="text-brand-cyan">Highlights</span></h2>
+                <span class="text-sm text-gray-500 hidden md:block">Premium • Medium • Budget</span>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[500px]">
+                <div class="col-span-2 row-span-2 relative rounded-2xl overflow-hidden group">
+                    <img src="img1.png" alt="Modern Interior Lighting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <h4 class="text-xl font-bold text-white">Interior Lighting</h4>
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden group">
+                    <img src="img2.png" alt="Switches and Controls" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute bottom-4 left-4">
+                        <h4 class="text-sm font-bold text-white">Modular Switches</h4>
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden group">
+                    <img src="img4.jpg" alt="Outdoor Lighting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                     <div class="absolute bottom-4 left-4">
+                        <h4 class="text-sm font-bold text-white">Outdoor</h4>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Our Works -->
+
+
+
+
+
+
+    <!-- VIDEO SHOWCASE SECTION -->
+<section class="py-24 bg-brand-dark">
+  <div class="container mx-auto px-6">
+
+    <div class="flex justify-between items-end mb-12">
+      <h2 class="text-3xl font-bold">Store <span class="text-brand-cyan">Showcase</span></h2>
+      <span class="text-sm text-gray-500 hidden md:block">Portrait • Landscape • Modern</span>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[550px]">
+
+      <!-- PORTRAIT VIDEO 1 -->
+      <div class="relative rounded-2xl overflow-hidden group">
+        <video 
+          src="portrait1.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        </video>
+        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+        <h4 class="absolute bottom-4 left-4 text-white font-bold">Showcase 01</h4>
+      </div>
+
+      <!-- PORTRAIT VIDEO 2 -->
+      <div class="relative rounded-2xl overflow-hidden group">
+        <video 
+          src="portrait2.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        </video>
+        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+        <h4 class="absolute bottom-4 left-4 text-white font-bold">Showcase 02</h4>
+      </div>
+
+      <!-- LANDSCAPE VIDEO (Bigger, 2x2 like your big image) -->
+      <div class="col-span-2 row-span-2 relative rounded-2xl overflow-hidden group">
+        <video
+          src="landscape1.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        </video>
+        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+        <h4 class="absolute bottom-6 left-6 text-xl font-bold text-white">Main Highlight</h4>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+    <!-- FOOTER / CONTACT (Details from Ad) -->
+    <footer id="contact" class="bg-black pt-20 pb-10 border-t border-white/10 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
+                
+                <!-- Brand Info -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <span class="text-2xl font-bold text-white">NOVA <span class="text-brand-cyan">NEXUS</span></span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        One stop destination for your entire electrical shopping.
+                        <br><span class="text-brand-cyan italic mt-2 block">"We Empower Your Dreams"</span>
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-cyan hover:text-black transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-cyan hover:text-black transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-cyan hover:text-black transition-colors"><i data-lucide="message-circle" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Details (From Ad) -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Contact Us</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-cyan shrink-0 mt-1"></i>
+                            <p class="text-gray-400 text-sm">
+                                Shakkena Complex,<br>
+                                Near Head Post Office,<br>
+                                Thodupuzha, Pin: 685584
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <a href="https://wa.me/918129412434"><i data-lucide="phone" class="w-5 h-5 text-brand-cyan shrink-0"></i></a>
+                            <a href="https://wa.me/918129412434"><p class="text-gray-400 text-sm">+91 81294 12434</p></a>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="mail" class="w-5 h-5 text-brand-cyan shrink-0"></i>
+                            <a href="mailto:novanexusthodupuzha@gmail.com" class="text-gray-400 text-sm hover:text-white">novanexusthodupuzha@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="rounded-xl overflow-hidden h-48 md:h-full border border-white/10 relative group">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.553726293627!2d76.7139543!3d9.8955667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07c5465a947403%3A0x857a65110e4d5447!2sHead%20Post%20Office%20Thodupuzha!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; filter: grayscale(100%) invert(92%) contrast(83%);" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        class="group-hover:filter-none transition-all duration-500">
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/5 pt-8 text-center">
+                <p class="text-gray-600 text-sm">&copy; 2025 Nova Nexus. All Rights Reserved.<br><a href="https://jjcoders00.github.io/JJ-coders">Made by <b style="font-size: 17px; color: orange;">JJ coders</b>.</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .animate-marquee { animation: marquee 30s linear infinite; }
+        @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        
+        .bg-300\% { background-size: 300% auto; }
+        @keyframes gradient { 
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animate-gradient { animation: gradient 4s ease infinite; }
+    </style>
+
+    <!-- Animation Scripts -->
+    <script>
+        lucide.createIcons();
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Animations
+        gsap.from("h1", { y: 100, opacity: 0, duration: 1.5, ease: "power4.out", delay: 0.2 });
+        gsap.from(".card-float", { y: 50, opacity: 0, duration: 1, delay: 1 });
+
+        // 3D Tilt Effect Script
+        document.querySelectorAll('.tilt-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -5;
+                const rotateY = ((x - centerX) / centerX) * 5;
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+            });
+        });
+
+        // Scroll Reveals
+        gsap.utils.toArray('.glass-panel').forEach(panel => {
+            gsap.from(panel, {
+                scrollTrigger: { trigger: panel, start: "top 85%" },
+                y: 50, opacity: 0, duration: 1, ease: "power3.out"
+            });
+        });
+    </script>
+</body>
+</html>
