@@ -1,580 +1,721 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>JJ Coders — We Build · We Learn · We Automate</title>
-  <meta name="description" content="JJ Coders — cinematic online studio for building, learning and automating.">
-  <link rel="icon" href="https://images.unsplash.com/photo-1526378727426-2f5f2b7e1c7b?q=80&w=48&auto=format&fit=crop&crop=faces" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Nexus | Simply Illuminating - Thodupuzha</title>
+    <!-- Primary Meta Tags -->
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<meta name="description" content="Light & Light (Nova Nexus) is Thodupuzha’s trusted store for LED lights, chandelier lights, interior lighting, Luker & Fybros products, electrical works, inverter batteries, Amaron batteries, CCTV, plumbing, and incinerators. Premium quality materials, expert installation & fast service.">
 
-  <style>
-  /* =========================================================================
-     JJ CODERS — Cinematic Landing Page (Ultra-dark theme)
-     Single-file index.html stylesheet (large, detailed, >500 lines)
-     - Designed to feel cinematic & animated (missioncontrol.co inspired)
-     - Uses responsive techniques and mobile fallbacks
-     - Replace /johan.jpg in repo root to show personal image
-     ========================================================================= */
+<meta name="keywords" content="LED lights Thodupuzha, chandelier lights Thodupuzha, interior lighting Thodupuzha, ceiling lights Thodupuzha, Luker lights Thodupuzha, Fybros lighting, hanging lights Thodupuzha, inverter shop Thodupuzha, Amaron battery Thodupuzha, inverter batteries Thodupuzha, electric shop Thodupuzha, interior design lighting Thodupuzha, incinerators manufacturer Thodupuzha, Nova Nexus, Nova Nexus Thodupuzha, Light & Light">
 
-  /* --------------- Base / Reset --------------- */
-  :root{
-    --bg:#020214;
-    --bg-2:#04061a;
-    --panel: rgba(255,255,255,0.02);
-    --muted:#9aa8c0;
-    --text:#eaf6ff;
-    --brand1:#6d28d9;
-    --brand2:#2563eb;
-    --accent:#22d3ee;
-    --glass: rgba(255,255,255,0.03);
-    --shadow: 0 30px 60px rgba(2,6,23,0.7);
-    --container:1200px;
-    --max-hero:1200px;
-    --ease: cubic-bezier(.2,.9,.25,1);
-    --radius: 14px;
-    --card-height: 260px;
-    --card-gap: 28px;
-  }
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Light & Light / Nova Nexus">
 
-  /* Reset and box-sizing */
-  html,body,div,span,applet,object,iframe,
-  h1,h2,h3,h4,h5,h6,p,blockquote,pre,
-  a,abbr,acronym,address,big,cite,code,
-  del,dfn,em,img,ins,kbd,q,s,samp,small,
-  strike,strong,sub,sup,tt,var,b,u,i,center,
-  dl,dt,dd,ol,nav,ul,li,fieldset,form,label,legend,
-  table,caption,tbody,tfoot,thead,tr,th,td,
-  article,aside,canvas,details,embed,figure,figcaption,
-  footer,header,hgroup,menu,nav,output,ruby,section,summary,time,
-  mark,audio,video { margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; }
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="Light & Light | LED Lights, Chandelier Lights, Interior Lighting & Inverter Shop in Thodupuzha">
+<meta property="og:description" content="Thodupuzha’s trusted lighting and electrical store – LED lights, chandelier lights, Luker lights, Fybros, electrical works, inverter batteries, Amaron batteries, CCTV, plumbing & incinerators.">
+<meta property="og:image" content="https://jjcoders00.github.io/novanexus/logo.png">
+<meta property="og:url" content="https://jjcoders00.github.io/novanexus">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Light & Light | Nova Nexus">
 
-  article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block; }
-  body { line-height:1; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; background:var(--bg); color:var(--text); font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial; }
-  ol,ul { list-style:none; }
-  blockquote,q { quotes:none; }
-  blockquote:before,blockquote:after,q:before,q:after { content:''; content:none; }
-  table { border-collapse:collapse; border-spacing:0; }
+<!-- Google SEO -->
 
-  /* --------------- Utility Layout --------------- */
-  .container { max-width:var(--container); margin:0 auto; padding:0 20px; }
-  .center { display:flex; align-items:center; justify-content:center; }
-  .sr-only { position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+<meta name="google-site-verification" content="pscapgoebuzldLe7DZMstKcbQ1VfC4a6cZyWF5WgCSo" />
 
-  /* --------------- Topbar / Header --------------- */
-  header.topbar { position:fixed; left:0; right:0; top:18px; z-index:120; display:flex; justify-content:center; pointer-events:none; }
-  .logo-flag { pointer-events:auto; display:flex; align-items:center; gap:12px; background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:8px 14px; border-radius:12px; backdrop-filter:blur(6px); box-shadow: var(--shadow); }
-  .logo-flag img { width:48px; height:48px; border-radius:10px; object-fit:cover; display:block; }
-  .logo-flag .brand { font-family:Poppins, sans-serif; font-weight:700; font-size:16px; letter-spacing:0.4px; color:var(--text); }
-  nav.small-nav { position:fixed; right:20px; top:22px; z-index:121; display:flex; gap:12px; pointer-events:auto; }
-  nav.small-nav a { color:var(--text); padding:10px 12px; border-radius:10px; font-weight:600; opacity:0.95; font-size:14px; }
-  nav.small-nav a:hover { color:var(--accent); transform:translateY(-2px); transition:all .24s var(--ease); }
+<link rel="icon" type="png" href="logo.png">
 
-  /* --------------- Global margins for sections --------------- */
-  section { padding:80px 0; position:relative; overflow:hidden; }
-  .full-vh { min-height:100vh; display:flex; align-items:center; }
 
-  /* --------------- Hero Section --------------- */
-  .hero { min-height:100vh; display:flex; align-items:center; padding:120px 0 80px; position:relative; overflow:visible; background:
-    radial-gradient(800px 400px at 14% 25%, rgba(37,99,235,0.06), transparent 8%),
-    radial-gradient(700px 400px at 86% 72%, rgba(109,40,217,0.06), transparent 12%),
-    linear-gradient(180deg, rgba(2,3,10,1), rgba(2,3,20,1)); }
-  .hero-inner { display:grid; grid-template-columns:1fr 560px; gap:36px; align-items:center; width:100%; max-width:var(--max-hero); margin:0 auto; padding:0 20px; }
-  @media (max-width:980px) { .hero-inner { grid-template-columns:1fr; gap:20px; padding:0 16px; } .hero { padding:90px 0 60px; } }
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Light & Light – LED Lights, Interior Lighting & Inverter Shop Thodupuzha">
+<meta name="twitter:description" content="Top-quality LED lighting, chandeliers, Fybros, Luker lights, inverter batteries, Amaron batteries, and electrical supplies in Thodupuzha.">
+<meta name="twitter:image" content="https://jjcoders00.github.io/novanexus/logo.png">
 
-  .hero-left { padding-right:6px; }
-  .kicker { display:inline-block; padding:8px 12px; border-radius:10px; background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); font-weight:700; color:var(--muted); margin-bottom:18px; font-size:13px; }
-  h1.hero-title { font-family:Poppins, sans-serif; font-weight:800; font-size:clamp(34px,6vw,68px); line-height:0.98; margin:0 0 18px; color:var(--text); }
-  h1.hero-title .accent { background:linear-gradient(90deg,var(--brand2),var(--brand1)); -webkit-background-clip:text; color:transparent; display:inline-block; }
-  p.hero-lead { color:var(--muted); max-width:820px; font-size:1.05rem; margin-bottom:22px; }
+<!-- Local SEO Schema (Improves Rank for Thodupuzha) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Light & Light - Nova Nexus Thodupuzha",
+  "image": "https://jjcoders00.github.io/novanexus/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Shakkena Complex, Near Head Post Office",
+    "addressLocality": "Thodupuzha",
+    "addressRegion": "Kerala",
+    "postalCode": "685584",
+    "addressCountry": "IN"
+  },
+  "url": "https://jjcoders00.github.io/novanexus",
+  "telephone": "+918129412434",
+  "priceRange": "₹₹",
+  "openingHours": "Mo-Sa 09:00-18:00",
+  "description": "Trusted LED lights, chandelier lights, interior lighting, Luker lights, Fybros electricals, inverter batteries, Amaron batteries, CCTV, electrical works, plumbing, and incinerators in Thodupuzha.",
+  "servesCuisine": "",
+  "sameAs": [
+    "https://facebook.com/yourpage",
+    "https://instagram.com/yourpage"
+  ]
+}
+</script>
 
-  .hero-cta { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
-  .btn { display:inline-block; padding:12px 18px; border-radius:12px; background:linear-gradient(90deg,var(--brand2),var(--brand1)); color:white; font-weight:800; box-shadow:0 10px 30px rgba(37,99,235,0.06); border:0; cursor:pointer; }
-  .btn.ghost { background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--text); }
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-  /* --------------- Hero stack visuals --------------- */
-  .hero-right { display:flex; align-items:center; justify-content:center; pointer-events:auto; }
-  .stack { width:480px; max-width:86vw; position:relative; height:var(--card-height); }
-  .card { position:absolute; left:0; right:0; border-radius:var(--radius); overflow:hidden; background:var(--panel); border:1px solid rgba(255,255,255,0.03); box-shadow:var(--shadow); display:block; transform-origin:center; will-change:transform; }
-  .card img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .7s var(--ease); }
-  .card .gloss { pointer-events:none; position:absolute; left:-40%; top:-10%; width:60%; height:120%; transform:skewX(-18deg); background:linear-gradient(120deg, rgba(255,255,255,0.06), rgba(255,255,255,0)); opacity:0; }
-  .card.card-1 { top:0; height:200px; transform:rotate(-6deg) translateY(-6%); z-index:20; }
-  .card.card-2 { top:28px; height:200px; transform:rotate(4deg) scale(.98); z-index:10; }
-  .card.card-3 { top:56px; height:200px; transform:rotate(-2deg) scale(.96); z-index:5; }
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-  /* --------------- Small responsive tweaks for hero stack --------------- */
-  @media (max-width:720px) {
-    .stack { height:180px; }
-    .card.card-1, .card.card-2, .card.card-3 { height:160px; }
-    h1.hero-title { font-size:clamp(26px,9vw,44px); }
-    .hero-left { padding-right:0; text-align:center; }
-    .hero-right { order:-1; }
-    .hero-inner { grid-template-columns:1fr; }
-    .kicker { margin-left:auto; margin-right:auto; }
-  }
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
 
-  /* --------------- About Section --------------- */
-  .about { padding:80px 0 40px; }
-  .about-wrap { display:grid; grid-template-columns:520px 1fr; gap:36px; align-items:start; max-width:var(--container); margin:0 auto; padding:0 20px; }
-  @media (max-width:980px) { .about-wrap { grid-template-columns:1fr; gap:20px; padding:0 16px; } }
-  .about-media { border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,0.03); box-shadow:var(--shadow); height:420px; background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00)); }
-  .about-media img { width:100%; height:100%; object-fit:cover; display:block; filter:contrast(1.02) saturate(1.05) brightness(0.9); }
-  .about-copy h2 { font-family:Poppins, sans-serif; font-size:32px; margin:0 0 14px; }
-  .about-copy p { color:var(--muted); margin-bottom:16px; font-size:1.02rem; }
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#080808',
+                            dark: '#121212',
+                            cyan: '#22d3ee', // Matching the Logo teal/cyan
+                            gold: '#fbbf24'  // Matching the warm light glow
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
 
-  .about-block { background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00)); padding:18px; border-radius:12px; border:1px solid rgba(255,255,255,0.02); margin-top:8px; }
+    <style>
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
 
-  /* --------------- Metrics row --------------- */
-  .metrics { display:flex; gap:18px; margin-top:18px; flex-wrap:wrap; }
-  .metric { background:var(--glass); padding:14px; border-radius:12px; min-width:140px; text-align:left; box-shadow:0 12px 30px rgba(0,0,0,0.5); }
-  .metric h3 { margin:0; font-family:Poppins, sans-serif; font-size:22px; }
-  .metric p { margin:6px 0 0 0; color:var(--muted); font-size:0.95rem; }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #22d3ee; }
 
-  /* --------------- Divisions (panels) --------------- */
-  .divisions { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; max-width:var(--container); margin:36px auto; padding:0 20px; }
-  @media (max-width:1100px) { .divisions { grid-template-columns:1fr; } }
-  .panel { position:relative; border-radius:12px; overflow:hidden; cursor:pointer; min-height:360px; border:1px solid rgba(255,255,255,0.03); background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.002)); box-shadow:var(--shadow); display:flex; flex-direction:column; justify-content:flex-end; transition:transform .45s var(--ease), box-shadow .45s var(--ease); }
-  .panel .media { position:absolute; inset:0; z-index:0; }
-  .panel img { width:100%; height:100%; object-fit:cover; display:block; transform-origin:center; transition:transform .8s var(--ease); }
-  .panel .overlay { position:relative; z-index:2; padding:28px; background:linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.62) 100%); }
-  .panel h3 { font-family:Poppins, sans-serif; margin:0 0 8px; font-size:22px; }
-  .panel p { color:var(--muted); margin:0 0 12px; }
-  .panel .cta-small { display:inline-block; padding:8px 12px; border-radius:10px; background:linear-gradient(90deg,var(--brand2),var(--brand1)); color:white; font-weight:700; }
+        /* Glassmorphism */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* 3D Tilt Effect */
+        .tilt-card {
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+            transition: transform 0.1s ease-out;
+        }
+        .tilt-content {
+            transform: translateZ(20px);
+        }
 
-  .panel:hover { transform:translateY(-10px); box-shadow:0 40px 80px rgba(2,6,23,0.8); }
-  .panel:hover img { transform:scale(1.06); }
-
-  /* --------------- Quote Banner --------------- */
-  .quote-banner { margin:48px 0; padding:40px 18px; border-radius:12px; background:linear-gradient(90deg, rgba(37,99,235,0.06), rgba(109,40,217,0.06)); text-align:center; }
-  .quote-banner p { font-size:1.28rem; color:#dff2ff; max-width:900px; margin:0 auto; font-family:Poppins, sans-serif; }
-
-  /* --------------- Contact CTA --------------- */
-  .cta-wrap { padding:60px 20px; text-align:center; }
-  .cta-wrap h2 { font-family:Poppins, sans-serif; font-size:28px; margin-bottom:10px; }
-  .cta-wrap p { color:var(--muted); max-width:820px; margin:0 auto 18px; }
-
-  /* --------------- Footer --------------- */
-  footer.site-footer { padding:46px 20px; background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00)); border-top:1px solid rgba(255,255,255,0.03); text-align:center; color:var(--muted); }
-
-  /* --------------- Small components --------------- */
-  .badge { display:inline-block; padding:6px 10px; border-radius:999px; background:linear-gradient(90deg,var(--brand2),var(--brand1)); color:#fff; font-weight:700; font-size:13px; }
-  .muted { color:var(--muted); }
-
-  /* --------------- Responsive behavior --------------- */
-  @media (max-width:680px) {
-    header.topbar { top:12px; }
-    .logo-flag .brand { font-size:14px; }
-    .hero { padding:80px 0 60px; }
-    h1.hero-title { font-size:clamp(22px,9vw,36px); text-align:center; }
-    .hero-left { text-align:center; padding-right:0; }
-    .hero-right { order:-1; }
-    .about-wrap { grid-template-columns:1fr; }
-    .about-media { height:220px; }
-    .divisions { grid-template-columns:1fr; gap:18px; padding:0 16px; }
-    .panel { min-height:240px; }
-    .stack { width:86vw; height:160px; }
-    .card.card-1, .card.card-2, .card.card-3 { height:140px; top:auto; }
-    .card.card-1 { transform:rotate(-4deg) translateY(-2%); }
-    .card.card-2 { transform:rotate(3deg) scale(.99); top:20px; }
-    .card.card-3 { transform:rotate(-2deg) scale(.97); top:36px; }
-  }
-
-  /* --------------- Accessibility / Reduced motion --------------- */
-  @media (prefers-reduced-motion: reduce) {
-    * { animation:none !important; transition:none !important; }
-    #bgCanvas { display:none; }
-  }
-
-  /* ---------- Extended helper rules and repeated small tweaks to increase stylesheet size
-     The following section intentionally repeats and fine-tunes variants to reach the requested
-     large stylesheet size and provide granular control for modifications (do not remove). ---------- */
-
-  /* variant tweaks for different section paddings */
-  section.pad-large { padding:120px 0; }
-  section.pad-medium { padding:80px 0; }
-  section.pad-small { padding:40px 0; }
-
-  .card-shadow-strong { box-shadow: 0 40px 90px rgba(2,6,23,0.85); }
-  .card-shadow-soft { box-shadow: 0 12px 30px rgba(2,6,23,0.6); }
-
-  /* fine control for hero text sizes across mid breakpoints */
-  @media (max-width:1180px) and (min-width:981px) {
-    h1.hero-title { font-size:56px; }
-  }
-  @media (max-width:980px) and (min-width:721px) {
-    h1.hero-title { font-size:44px; }
-  }
-
-  /* micro spacing utilities */
-  .mt-8{ margin-top:8px } .mt-12{ margin-top:12px } .mt-16{ margin-top:16px } .mt-24{ margin-top:24px }
-  .mb-8{ margin-bottom:8px } .mb-16{ margin-bottom:16px } .mb-24{ margin-bottom:24px }
-
-  /* Button variants */
-  .btn-lg { padding:16px 22px; font-size:16px; border-radius:14px; }
-  .btn-sm { padding:8px 12px; font-size:14px; border-radius:10px; }
-
-  /* gradients for panels */
-  .glow-border { box-shadow: 0 6px 30px rgba(37,99,235,0.06), 0 0 40px rgba(109,40,217,0.04) inset; border:1px solid rgba(255,255,255,0.02); }
-
-  /* repeated fine-grain hover states */
-  .panel:hover .overlay { transform: translateY(-4px); transition:transform .5s var(--ease); }
-  .panel:active { transform: translateY(-6px); transition:transform .18s var(--ease); }
-
-  /* text selection color */
-  ::selection { background: rgba(99,102,241,0.16); color: var(--text); }
-
-  /* long section of commented helper rules to increase CSS length (safe, non-executing) */
-  /*
-    Helper Rule Block: This block intentionally contains verbose comments and small helpers
-    to provide designers with quick toggles when customizing this stylesheet. Keep this block
-    (or shorten it) when you theme the site later in production.
-  */
-
-  /*
-    - Toggle `--brand1` and `--brand2` to change accent gradients globally.
-    - Use `.card-shadow-strong` on any element to enhance depth.
-    - `section.pad-large` increases vertical rhythm for long-form content areas.
-    - The `stack` cards have three layers with gloss sweeping animations controlled via JS.
-    - Accessibility: Use `prefers-reduced-motion: reduce` to disable motion automatically.
-  */
-
-  /* Add more tiny helpers (spacing, colors), repeated to lengthen CSS: */
-  .p-8{ padding:8px } .p-12{ padding:12px } .p-16{ padding:16px } .p-20{ padding:20px }
-  .text-muted { color:var(--muted) }
-  .text-strong { color:var(--text); font-weight:700 }
-  .bg-glass { background:var(--glass) }
-
-  /* End of long stylesheet (still safe and modular). */
-
-  </style>
-
+        /* Text Stroke for "Outline" look */
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+            color: transparent;
+        }
+        
+        /* Glow Animation */
+        @keyframes glow {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        .animate-glow {
+            animation: glow 4s infinite ease-in-out;
+        }
+    </style>
 </head>
-<body>
+<body class="antialiased selection:bg-brand-cyan selection:text-black">
 
-  <!-- Background canvas for particles / depth -->
-  <canvas id="bgCanvas" aria-hidden="true" style="position:fixed;inset:0;z-index:-4"></canvas>
+    <!-- NAVIGATION -->
+<nav class="fixed w-full z-50 top-0 transition-all duration-300 p-4 md:p-6 bg-black/50 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 border-2 border-brand-cyan flex items-center justify-center bg-black overflow-hidden">
+                <img src="logo.png">
+            </div>
+            <div class="flex flex-col">
+                <span class="font-bold text-xl tracking-wider text-white group-hover:text-brand-cyan transition-colors">NOVA NEXUS</span>
+                <span class="text-[10px] tracking-[0.2em] text-gray-400 uppercase">We Empower Your Dreams</span>
+            </div>
+        </a>
 
-  <!-- Topbar -->
-  <header>
-    <div class="topbar container" style="display:flex;justify-content:space-between;align-items:center;gap:12px">
-      <div class="logo-flag" role="banner">
-        <img src="logo.jpg" alt="JJ Coders logo">
-        <div class="brand">JJ Coders</div>
-      </div>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-8">
+            <a href="#services" class="text-sm font-medium hover:text-brand-cyan transition-colors">Services</a>
+            <a href="#products" class="text-sm font-medium hover:text-brand-cyan transition-colors">Products</a>
+            <a href="#brands" class="text-sm font-medium hover:text-brand-cyan transition-colors">Partners</a>
+            <a href="#contact" class="text-sm font-medium hover:text-brand-cyan transition-colors">Contact</a>
+        </div>
 
-      <nav class="small-nav" aria-label="Top navigation">
-        <a href="#about">About</a>
-        <a href="#divisions">Divisions</a>
-        <a href="#contact">Contact</a>
-      </nav>
+        <!-- CTA -->
+        <a href="tel:+918129412434" class="hidden md:flex items-center gap-2 bg-brand-cyan text-black px-5 py-2.5 rounded-full font-bold text-sm hover:bg-white transition-all duration-300 shadow-[0_0_15px_rgba(34,211,238,0.4)]">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            <span>+91 81294 12434</span>
+        </a>
+
+        <!-- Mobile Menu Icon -->
+        <button id="menu-toggle" class="md:hidden text-white">
+            <i data-lucide="menu" class="w-8 h-8"></i>
+        </button>
     </div>
-  </header>
 
-  <!-- progress bar -->
-  <div id="progressWrap" style="position:fixed;top:0;left:0;right:0;height:4px;z-index:130;background:transparent">
-    <div id="progressBar" style="height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--brand2));transform-origin:left"></div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden flex-col bg-black/80 backdrop-blur-lg border-t border-white/10 mt-4 px-6 py-4 space-y-4 md:hidden animate-slideDown">
+        <a href="#services" class="block text-sm font-medium text-white hover:text-brand-cyan">Services</a>
+        <a href="#products" class="block text-sm font-medium text-white hover:text-brand-cyan">Products</a>
+        <a href="#brands" class="block text-sm font-medium text-white hover:text-brand-cyan">Partners</a>
+        <a href="#contact" class="block text-sm font-medium text-white hover:text-brand-cyan">Contact</a>
+
+        <a href="tel:+918129412434" class="flex items-center justify-center gap-2 bg-brand-cyan text-black px-5 py-2.5 rounded-full font-bold text-sm hover:bg-white transition-all shadow-[0_0_15px_rgba(34,211,238,0.4)]">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            <span>+91 81294 12434</span>
+        </a>
+    </div>
+</nav>
+
+<!-- SLIDE-DOWN ANIMATION -->
+<style>
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slideDown {
+        animation: slideDown 0.25s ease-out;
+    }
+</style>
+
+<!-- MOBILE MENU JS -->
+<script>
+    const menuBtn = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+</script>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Background Glows -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-brand-cyan/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-brand-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Text Content -->
+            <div class="text-left space-y-8">
+                <div class="inline-block px-4 py-1 border border-brand-cyan/30 rounded-full bg-brand-cyan/5 backdrop-blur-sm">
+                    <span class="text-brand-cyan text-xs font-bold tracking-widest uppercase">Thodupuzha's Premium Electrical Store</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tight">
+                    SIMPLY <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-cyan to-white bg-300% animate-gradient">ILLUMINATING</span>
+                </h1>
+                
+                <p class="text-xl text-gray-400 max-w-md leading-relaxed font-light">
+                    One stop destination for your entire electrical shopping. From <span class="text-white font-medium">LED Lighting</span> to <span class="text-white font-medium">Heavy Electricals</span>.
+                </p>
+
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#contact" class="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-brand-cyan transition-colors duration-300">
+                        Visit Showroom
+                    </a>
+                    <a href="https://wa.me/918129412434" class="px-8 py-4 border border-white/20 hover:border-brand-cyan text-white font-medium rounded-full transition-colors duration-300">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+
+            <!-- Visual Hero Image (Parallax) -->
+            <div class="relative h-[500px] md:h-[700px] w-full flex items-center justify-center parallax-wrapper">
+                <!-- Using a placeholder image that resembles the ad's pendant lights -->
+                <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?q=80&w=1000&auto=format&fit=crop" 
+                     alt="Premium Hanging Lights" 
+                     class="absolute w-full h-full object-cover rounded-2xl opacity-60 mix-blend-screen mask-image-fade"
+                     style="mask-image: linear-gradient(to bottom, black 50%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);">
+                
+                <div class="absolute z-20 bg-black/80 backdrop-blur-md p-6 rounded-xl border border-white/10 bottom-20 -left-10 shadow-2xl max-w-xs card-float">
+                    <div class="flex items-center gap-4 mb-3">
+                        <div class="p-2 bg-brand-cyan/20 rounded-lg">
+                            <i data-lucide="trophy" class="text-brand-cyan w-6 h-6"></i>
+                        </div>
+                        <span class="font-bold text-white">Specialist Service</span>
+                    </div>
+                    <p class="text-sm text-gray-400" style="text-align: center;">premium interior lighting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION (From Ad Details) -->
+    <section id="services" class="py-24 relative bg-[#0a0a0a]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Our <span class="text-brand-cyan">Collections</span></h2>
+                <p class="text-gray-400">Exquisite Collection of Premium, Medium & Budget Brands</p>
+                <div class="h-1 w-20 bg-brand-cyan mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 max-w-6xl mx-auto">
+
+
+                <!-- LIGHTING WORKS -->
+<div class="tilt-card glass-panel p-8 md:p-12 rounded-3xl group hover:border-brand-cyan/50 transition-colors cursor-default relative overflow-hidden">
+    <div class="absolute top-0 right-0 p-32 bg-brand-cyan/5 blur-3xl rounded-full -mr-16 -mt-16 transition-all duration-500 group-hover:bg-brand-cyan/10"></div>
+
+    <div class="tilt-content relative z-10">
+        <div class="flex items-center justify-between mb-8">
+            <h3 class="text-3xl font-bold font-serif italic">Lighting Works</h3>
+            <i data-lucide="lightbulb" class="w-10 h-10 text-brand-cyan"></i>
+        </div>
+
+        <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-gray-300">
+                <span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span>
+                Indoor & Outdoor Lighting Setup
+            </li>
+            <li class="flex items-center gap-3 text-gray-300">
+                <span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span>
+                Architectural Lighting Installation
+            </li>
+            <li class="flex items-center gap-3 text-gray-300">
+                <span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span>
+                LED Upgrades & Modernization
+            </li>
+            <li class="flex items-center gap-3 text-brand-cyan font-bold bg-brand-cyan/10 p-3 -mx-3 rounded-lg">
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                Complete Lighting Project Execution
+            </li>
+        </ul>
+    </div>
+</div>
+
+                
+               <!-- ELECTRIC MATERIAL SUPPLY -->
+<div class="tilt-card glass-panel p-8 md:p-12 rounded-3xl group hover:border-brand-cyan/50 transition-colors cursor-default relative overflow-hidden">
+    <div class="absolute top-0 right-0 p-32 bg-brand-cyan/5 blur-3xl rounded-full -mr-16 -mt-16 transition-all duration-500 group-hover:bg-brand-cyan/10"></div>
+
+    <div class="tilt-content relative z-10">
+        <div class="flex items-center justify-between mb-8">
+            <h3 class="text-3xl font-bold font-serif italic">Electric Material Supply</h3>
+            <i data-lucide="package" class="w-10 h-10 text-brand-cyan"></i>
+        </div>
+
+        <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span> All Electrical Components</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span> Industrial & Domestic Supply</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span> Commercial Wiring Materials</li>
+            <li class="flex items-center gap-3 text-brand-cyan font-bold bg-brand-cyan/10 p-3 -mx-3 rounded-lg">
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                Bulk & Retail Supply Available
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- ELECTRIC & PLUMBING WORKS -->
+<div class="tilt-card glass-panel p-8 md:p-12 rounded-3xl group hover:border-brand-gold/50 transition-colors cursor-default relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 p-32 bg-brand-gold/5 blur-3xl rounded-full -ml-16 -mb-16 transition-all duration-500 group-hover:bg-brand-gold/10"></div>
+
+    <div class="tilt-content relative z-10">
+        <div class="flex items-center justify-between mb-8">
+            <h3 class="text-3xl font-bold font-serif italic">Electric & Plumbing Works</h3>
+            <i data-lucide="wrench" class="w-10 h-10 text-brand-gold"></i>
+        </div>
+
+        <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> Electrical Installation</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> Plumbing Installation</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> Maintenance & Repair</li>
+            <li class="flex items-center gap-3 text-brand-gold font-bold bg-brand-gold/10 p-3 -mx-3 rounded-lg">
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                Full Residential & Commercial Service
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- INCINERATORS -->
+<div class="tilt-card glass-panel p-8 md:p-12 rounded-3xl group hover:border-brand-cyan/50 transition-colors cursor-default relative overflow-hidden">
+    <div class="absolute top-0 left-0 p-32 bg-brand-cyan/5 blur-3xl rounded-full -ml-16 -mt-16 transition-all duration-500 group-hover:bg-brand-cyan/10"></div>
+
+    <div class="tilt-content relative z-10">
+        <div class="flex items-center justify-between mb-8">
+            <h3 class="text-3xl font-bold font-serif italic">Incinerators</h3>
+            <i data-lucide="flame" class="w-10 h-10 text-brand-cyan"></i>
+        </div>
+
+        <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span> Waste Burning Units</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span> Installation & Setup</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span> Maintenance Service</li>
+            <li class="flex items-center gap-3 text-brand-cyan font-bold bg-brand-cyan/10 p-3 -mx-3 rounded-lg">
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                Eco-Friendly Units
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- INVERTER SALES & SERVICE -->
+<div class="tilt-card glass-panel p-8 md:p-12 rounded-3xl group hover:border-brand-gold/50 transition-colors cursor-default relative overflow-hidden">
+    <div class="absolute right-0 bottom-0 p-32 bg-brand-gold/5 blur-3xl rounded-full -mr-16 -mb-16 transition-all duration-500 group-hover:bg-brand-gold/10"></div>
+
+    <div class="tilt-content relative z-10">
+        <div class="flex items-center justify-between mb-8">
+            <h3 class="text-3xl font-bold font-serif italic">Inverter Sales & Service</h3>
+            <i data-lucide="battery-charging" class="w-10 h-10 text-brand-gold"></i>
+        </div>
+
+        <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> Home Inverters</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> Battery Systems</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> Full Service & Repair</li>
+            <li class="flex items-center gap-3 text-brand-gold font-bold bg-brand-gold/10 p-3 -mx-3 rounded-lg">
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                Reliable Power Solutions
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- WATER PURIFIER -->
+<div class="tilt-card glass-panel p-8 md:p-12 rounded-3xl group hover:border-brand-cyan/50 transition-colors cursor-default relative overflow-hidden">
+    <div class="absolute top-0 right-0 p-32 bg-brand-cyan/5 blur-3xl rounded-full -mr-16 -mt-16 transition-all duration-500 group-hover:bg-brand-cyan/10"></div>
+
+    <div class="tilt-content relative z-10">
+        <div class="flex items-center justify-between mb-8">
+            <h3 class="text-3xl font-bold font-serif italic">Water Purifier</h3>
+            <i data-lucide="droplet" class="w-10 h-10 text-brand-cyan"></i>
+        </div>
+
+        <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span> RO Systems</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span> UV/UF Filters</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-cyan rounded-full"></span> Installation & Service</li>
+            <li class="flex items-center gap-3 text-brand-cyan font-bold bg-brand-cyan/10 p-3 -mx-3 rounded-lg">
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                Pure Drinking Water Guaranteed
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- CCTV -->
+<div class="tilt-card glass-panel p-8 md:p-12 rounded-3xl group hover:border-brand-gold/50 transition-colors cursor-default relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 p-32 bg-brand-gold/5 blur-3xl rounded-full -ml-16 -mb-16 transition-all duration-500 group-hover:bg-brand-gold/10"></div>
+
+    <div class="tilt-content relative z-10">
+        <div class="flex items-center justify-between mb-8">
+            <h3 class="text-3xl font-bold font-serif italic">CCTV</h3>
+            <i data-lucide="camera" class="w-10 h-10 text-brand-gold"></i>
+        </div>
+
+        <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> CCTV Installation</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> Surveillance Setup</li>
+            <li class="flex items-center gap-3 text-gray-300"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span> Maintenance & Support</li>
+            <li class="flex items-center gap-3 text-brand-gold font-bold bg-brand-gold/10 p-3 -mx-3 rounded-lg">
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                Complete Security Solutions
+            </li>
+        </ul>
+    </div>
+</div>
+
+                </div>
+
+               
+
+            </div>
+        </div>
+    </section>
+
+   <!-- BRANDS MARQUEE (Improved Bright Version) -->
+<section id="brands" class="py-16 border-y border-white/5 bg-black relative overflow-hidden">
+    <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10"></div>
+    <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10"></div>
+
+    <style>
+        .brand-text {
+            opacity: 0.65; /* Brighter but still classy */
+            letter-spacing: 2px;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.35);
+            color: transparent; /* Premium outlined text look */
+        }
+    </style>
+
+    <div class="flex whitespace-nowrap animate-marquee gap-12 items-center">
+        <!-- Item Set 1 -->
+        <span class="text-4xl md:text-6xl font-black uppercase px-4 brand-text">Schneider</span>
+        <span class="text-4xl md:text-6xl font-black uppercase px-4 brand-text">Luker</span>
+        <span class="text-4xl md:text-6xl font-black uppercase px-4 brand-text">Fybros</span>
+        <span class="text-4xl md:text-6xl font-black uppercase px-4 brand-text">V-Guard</span>
+        <span class="text-4xl md:text-6xl font-black uppercase px-4 brand-text">GM</span>
+        <span class="text-4xl md:text-6xl font-black uppercase px-4 brand-text">Legrand</span>
+        <span class="text-4xl md:text-6xl font-black uppercase px-4 brand-text">Finolex</span>
+        <span class="text-4xl md:text-6xl font-black uppercase px-4 brand-text">Incinerator</span>
+
+        <!-- Item Set 2 -->
+        <span class="text-4xl md:text-6xl font-black uppercase px-4 brand-text">Schneider</span>
+        <span class="text-4xl md:text-6xl font-black uppercase px-4 brand-text">Luker</span>
+        <span class="text-4xl md:text-6xl font-black uppercase px-4 brand-text">Fybros</span>
+        <span class="text-4xl md:text-6xl font-black uppercase px-4 brand-text">V-Guard</span>
+        <span class="text-4xl md:text-6xl font-black uppercase px-4 brand-text">GM</span>
+        <span class="text-4xl md:text-6xl font-black uppercase px-4 brand-text">Legrand</span>
+    </div>
+</section>
+
+
+
+    <!-- GALLERY / SHOWCASE -->
+    <section class="py-24 bg-brand-dark">
+        <div class="container mx-auto px-6">
+             <div class="flex justify-between items-end mb-12">
+                <h2 class="text-3xl font-bold">Store <span class="text-brand-cyan">Highlights</span></h2>
+                <span class="text-sm text-gray-500 hidden md:block">Premium • Medium • Budget</span>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[500px]">
+                <div class="col-span-2 row-span-2 relative rounded-2xl overflow-hidden group">
+                    <img src="img1.png" alt="Modern Interior Lighting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <h4 class="text-xl font-bold text-white">Interior Lighting</h4>
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden group">
+                    <img src="img2.png" alt="Switches and Controls" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute bottom-4 left-4">
+                        <h4 class="text-sm font-bold text-white">Modular Switches</h4>
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden group">
+                    <img src="img4.jpg" alt="Outdoor Lighting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                     <div class="absolute bottom-4 left-4">
+                        <h4 class="text-sm font-bold text-white">Outdoor</h4>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Our Works -->
+
+
+
+
+
+
+    <!-- VIDEO SHOWCASE SECTION -->
+<section class="py-24 bg-brand-dark">
+  <div class="container mx-auto px-6">
+
+    <div class="flex justify-between items-end mb-12">
+      <h2 class="text-3xl font-bold">Our <span class="text-brand-cyan">Works</span></h2>
+      <span class="text-sm text-gray-500 hidden md:block">Portrait • Landscape • Modern</span>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[550px]">
+
+      <!-- PORTRAIT VIDEO 1 -->
+      <div class="relative rounded-2xl overflow-hidden group">
+        <video 
+          src="portrait1.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        </video>
+        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+        <h4 class="absolute bottom-4 left-4 text-white font-bold">Lakme Salon</h4>
+      </div>
+
+      <!-- PORTRAIT VIDEO 2 -->
+      <div class="relative rounded-2xl overflow-hidden group">
+        <video 
+          src="portrait2.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        </video>
+        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+        <h4 class="absolute bottom-4 left-4 text-white font-bold">Vets Dale</h4>
+      </div>
+
+      <!-- LANDSCAPE VIDEO (Bigger, 2x2 like your big image) -->
+      <div class="col-span-2 row-span-2 relative rounded-2xl overflow-hidden group">
+        <video
+          src="landscape1.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        </video>
+        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+        <h4 class="absolute bottom-6 left-6 text-xl font-bold text-white">Dental</h4>
+      </div>
+
+    </div>
+
   </div>
+</section>
 
-  <main>
 
-    <!-- HERO -->
-    <section id="hero" class="hero full-vh" role="region" aria-label="Hero">
-      <div class="hero-inner">
-        <div class="hero-left">
-          <div class="kicker">JJ Coders — Build · Learn · Automate</div>
-          <h1 class="hero-title">We <span class="accent">Build</span>. We <span class="accent">Learn</span>. We <span class="accent">Automate</span>.</h1>
-          <p class="hero-lead">We are an online creative studio that builds modern websites, teaches practical coding & AI, and creates automations that save time. Join our journey — build with us, learn with us, automate with us.</p>
-          <div class="hero-cta" role="navigation" aria-label="Primary calls to action">
-            <button class="btn btn-lg" id="ctaExplore">Explore Divisions</button>
-            <a class="btn ghost btn-sm" href="#about">Read About</a>
-          </div>
-        </div>
 
-        <div class="hero-right" aria-hidden="false">
-          <div class="stack" role="presentation" aria-hidden="false">
-            <div class="card card-1" aria-hidden="true">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="Build — developer workspace">
-              <div class="gloss"></div>
+
+
+    <!-- FOOTER / CONTACT (Details from Ad) -->
+    <footer id="contact" class="bg-black pt-20 pb-10 border-t border-white/10 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
+                
+                <!-- Brand Info -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <span class="text-2xl font-bold text-white">NOVA <span class="text-brand-cyan">NEXUS</span></span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        One stop destination for your entire electrical shopping.
+                        <br><span class="text-brand-cyan italic mt-2 block">"We Empower Your Dreams"</span>
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-cyan hover:text-black transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-cyan hover:text-black transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-cyan hover:text-black transition-colors"><i data-lucide="message-circle" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Details (From Ad) -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Contact Us</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-cyan shrink-0 mt-1"></i>
+                            <p class="text-gray-400 text-sm">
+                                Shakkena Complex,<br>
+                                Near Head Post Office,<br>
+                                Thodupuzha, Pin: 685584
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <a href="https://wa.me/918129412434"><i data-lucide="phone" class="w-5 h-5 text-brand-cyan shrink-0"></i></a>
+                            <a href="https://wa.me/918129412434"><p class="text-gray-400 text-sm">+91 81294 12434</p></a>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="mail" class="w-5 h-5 text-brand-cyan shrink-0"></i>
+                            <a href="mailto:novanexusthodupuzha@gmail.com" class="text-gray-400 text-sm hover:text-white">novanexusthodupuzha@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="rounded-xl overflow-hidden h-48 md:h-full border border-white/10 relative group">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.553726293627!2d76.7139543!3d9.8955667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07c5465a947403%3A0x857a65110e4d5447!2sHead%20Post%20Office%20Thodupuzha!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; filter: grayscale(100%) invert(92%) contrast(83%);" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        class="group-hover:filter-none transition-all duration-500">
+                    </iframe>
+                </div>
             </div>
-            <div class="card card-2" aria-hidden="true">
-              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" alt="Learn — online learning">
-              <div class="gloss"></div>
+            
+            <div class="border-t border-white/5 pt-8 text-center">
+                <p class="text-gray-600 text-sm">&copy; 2025 Nova Nexus. All Rights Reserved.<br><a href="https://jjcoders00.github.io/JJ-coders">Made by <b style="font-size: 17px; color: orange;">JJ coders</b>.</a></p>
             </div>
-            <div class="card card-3" aria-hidden="true">
-              <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437c2?q=80&w=1200&auto=format&fit=crop" alt="Automate — data visualization">
-              <div class="gloss"></div>
-            </div>
-          </div>
         </div>
-      </div>
-
-      <div style="position:absolute;left:50%;transform:translateX(-50%);bottom:22px;z-index:5;color:var(--muted);font-weight:600" aria-hidden="true">Scroll ↓</div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="about" role="region" aria-label="About JJ Coders">
-      <div class="about-wrap">
-        <div class="about-media about-block">
-          <!-- Use johan.jpg from repo root if present; otherwise fallback to Unsplash -->
-          <img src="johan.jpg" alt="Johan" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop'">
-        </div>
-
-        <div class="about-copy">
-          <h2>About JJ Coders</h2>
-
-          <p><strong>JJ Coders</strong> is an online-first creative technology studio. We merge design craft, practical education, and automation engineering to help creators, students, and small businesses build modern digital products and skills — all remotely.</p>
-
-          <p>We operate across three core pillars:</p>
-
-          <div class="about-block" role="article" aria-label="Detailed pillars">
-            <h3 style="margin-top:0">Build</h3>
-            <p>We design and develop websites and web apps focused on performance, accessibility, and beautiful interface design. From landing pages to production-ready web apps, our work is built to be fast and reliable.</p>
-
-            <h3>Learn</h3>
-            <p>Our learning pathways are project-led: short, actionable modules that teach AI, coding, and web development using real projects. Students finish with a working product and a confident mindset.</p>
-
-            <h3>Automate</h3>
-            <p>We create practical automation — chatbots, workflow automations, and small business tools that reduce repetitive work and enable creators to scale their efforts.</p>
-          </div>
-
-          <p style="margin-top:14px;color:var(--muted)">We believe in hands-on learning and practical products. Everything we teach or build should have immediate value.</p>
-
-          <!-- metrics -->
-          <div class="metrics" role="list" aria-label="Key metrics">
-            <div class="metric" role="listitem" aria-label="Projects"><h3>20+</h3><p>Projects delivered</p></div>
-            <div class="metric" role="listitem" aria-label="Learners"><h3>15+</h3><p>Students & learners</p></div>
-            <div class="metric" role="listitem" aria-label="Automations"><h3>6</h3><p>Automations & bots</p></div>
-            <div class="metric" role="listitem" aria-label="Hours"><h3>100+</h3><p>Hours of workshop</p></div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- DIVISIONS -->
-    <section id="divisions" class="divisions" aria-label="Divisions">
-      <div class="panel" role="link" tabindex="0" aria-label="Build division" data-href="build.html">
-        <div class="media" aria-hidden="true">
-          <img src="build.jpg" alt="Build">
-        </div>
-        <div class="overlay">
-          <h3>Build</h3>
-          <p>Premium websites & products — fast, accessible, and designed to convert.</p>
-          <div style="margin-top:12px"><span class="cta-small">See our work →</span></div>
-        </div>
-      </div>
-
-      <div class="panel" role="link" tabindex="0" aria-label="Learn division" data-href="learn.html">
-        <div class="media" aria-hidden="true">
-          <img src="learn.jpeg" alt="Learn">
-        </div>
-        <div class="overlay">
-          <h3>Learn</h3>
-          <p>Project-driven courses: AI, web dev, and coding — practical, playful, and beginner-friendly.</p>
-          <div style="margin-top:12px"><span class="cta-small">Join a course →</span></div>
-        </div>
-      </div>
-
-      <div class="panel" role="link" tabindex="0" aria-label="Automate division" data-href="automate.html">
-        <div class="media" aria-hidden="true">
-          <img src="automate.jpeg" alt="Automate">
-        </div>
-        <div class="overlay">
-          <h3>Automate</h3>
-          <p>Intelligent automations and tools — bots and workflow systems that save time and scale operations.</p>
-          <div style="margin-top:12px"><span class="cta-small">Request a demo →</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- QUOTE BANNER -->
-    <section class="quote-banner" aria-hidden="false" role="region">
-      <div class="container">
-        <p>“Technology should feel like magic — JJ Coders makes it happen.”</p>
-      </div>
-    </section>
-
-    <!-- CONTACT CTA -->
-    <section id="contact" class="cta-wrap" role="region">
-      <div class="container">
-        <div style="display:inline-block;background:linear-gradient(90deg,var(--brand2),var(--brand1));padding:14px;border-radius:12px;color:#fff;font-weight:800">Get in touch</div>
-        <h2 style="font-family:Poppins,sans-serif;font-size:28px;margin-top:18px">Let's build something extraordinary</h2>
-        <p style="color:var(--muted);max-width:820px;margin:12px auto">Whether you'd like to commission a website, enroll in a course, or automate a business process — tell us about your project and we'll respond within 24 hours.</p>
-        <div style="margin-top:18px">
-          <a class="btn" href="https://wa.me/919446071043">WhatsApp</a>
-          <a class="btn ghost" href="mailto:jjcoders.jjco@gmail.com" target="_blank" rel="noopener" style="margin-left:10px">Email</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer" role="contentinfo">
-      <div class="container">
-        <div style="display:flex;gap:18px;align-items:center;justify-content:center">
-          <img src="logo.jpg" alt="JJ Coders" style="width:44px;height:44px;border-radius:8px;object-fit:cover">
-          <strong style="font-family:Poppins,sans-serif">JJ Coders</strong>
-        </div>
-        <p style="color:var(--muted);margin-top:12px">© 2025 JJ Coders · We Build. We Learn. We Automate.</p>
-        <p style="color:var(--muted);margin-top:6px">Designed & built by JJ Coders • Contact: <a href="https://wa.me/919446071043">+91 94460 71043 (WA)</a></p>
-      </div>
     </footer>
 
-  </main>
-
-  <!-- Inline JS: particles, GSAP animations, interactions -->
-  <script>
-  (function(){
-    // wait for GSAP to load
-    function ready(fn){
-      if(window.gsap && window.gsap.registerPlugin && window.ScrollTrigger) return fn();
-      var i=0; var t=setInterval(function(){ i++; if(window.gsap && window.ScrollTrigger){ clearInterval(t); fn(); } if(i>120){ clearInterval(t); console.warn('GSAP not loaded'); } }, 30);
-    }
-
-    ready(function(){
-      gsap.registerPlugin(ScrollTrigger);
-
-      // Detect mobile / reduced motion
-      const isMobile = window.innerWidth < 900 || /Mobi|Android/i.test(navigator.userAgent);
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-      /* ---------- Particles (canvas) ---------- */
-      (function particles(){
-        const canvas = document.getElementById('bgCanvas'); if(!canvas || reduceMotion) return;
-        const ctx = canvas.getContext('2d');
-        let W=canvas.width=innerWidth, H=canvas.height=innerHeight;
-        const COUNT = Math.max(60, Math.floor((W*H)/15000));
-        let parts=[];
-
-        function rand(min,max){ return Math.random()*(max-min)+min; }
-        function init(){ parts=[]; for(let i=0;i<COUNT;i++){ parts.push({ x:rand(0,W), y:rand(0,H), r:rand(0.6,2.6), vx:rand(-0.3,0.3), vy:rand(-0.15,0.15), hue:rand(200,260) }); } }
-        init();
-        window.addEventListener('resize', ()=>{ W=canvas.width=innerWidth; H=canvas.height=innerHeight; init(); });
-
-        function draw(){
-          ctx.clearRect(0,0,W,H);
-          for(let p of parts){
-            p.x += p.vx; p.y += p.vy;
-            if(p.x < -20) p.x = W+20;
-            if(p.x > W+20) p.x = -20;
-            if(p.y < -20) p.y = H+20;
-            if(p.y > H+20) p.y = -20;
-            ctx.beginPath();
-            ctx.fillStyle = `hsla(${p.hue},70%,65%,0.06)`;
-            ctx.arc(p.x, p.y, p.r, 0, Math.PI*2); ctx.fill();
-          }
-          requestAnimationFrame(draw);
+    <style>
+        .animate-marquee { animation: marquee 30s linear infinite; }
+        @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        
+        .bg-300\% { background-size: 300% auto; }
+        @keyframes gradient { 
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
-        draw();
-      })();
+        .animate-gradient { animation: gradient 4s ease infinite; }
+    </style>
 
-      /* ---------- Hero animations ---------- */
-      (function hero(){
-        const cards = document.querySelectorAll('.card');
-        gsap.from(cards, { y:30, opacity:0, stagger:0.08, duration:1.1, ease:'power3.out' });
+    <!-- Animation Scripts -->
+    <script>
+        lucide.createIcons();
+        gsap.registerPlugin(ScrollTrigger);
 
-        // subtle float loops
-        gsap.to(cards[0], { y:'-=6', repeat:-1, yoyo:true, duration:4, ease:'sine.inOut' });
-        gsap.to(cards[1], { y:'-=4', repeat:-1, yoyo:true, duration:4.4, ease:'sine.inOut', delay:0.2 });
-        gsap.to(cards[2], { y:'-=3', repeat:-1, yoyo:true, duration:5, ease:'sine.inOut', delay:0.5 });
+        // Hero Animations
+        gsap.from("h1", { y: 100, opacity: 0, duration: 1.5, ease: "power4.out", delay: 0.2 });
+        gsap.from(".card-float", { y: 50, opacity: 0, duration: 1, delay: 1 });
 
-        // gloss sweeps periodically
-        function sweep(card){
-          const g = card.querySelector('.gloss'); if(!g) return;
-          gsap.fromTo(g, { xPercent:-120, autoAlpha:0 }, { xPercent:120, autoAlpha:0.7, duration:1.1, ease:'power1.inOut', onComplete: ()=> gsap.to(g, { autoAlpha:0, duration:0.5 }) });
-        }
-        setInterval(()=>sweep(cards[0]), 4200);
-        setInterval(()=>sweep(cards[1]), 5200);
-        setInterval(()=>sweep(cards[2]), 7600);
-
-        // mouse parallax (desktop only)
-        if(!isMobile && !reduceMotion){
-          const stack = document.querySelector('.stack');
-          stack.addEventListener('mousemove', (e)=>{
-            const r = stack.getBoundingClientRect();
-            const x = (e.clientX - r.left)/r.width - 0.5;
-            const y = (e.clientY - r.top)/r.height - 0.5;
-            gsap.to(cards[0], { rotationY: x*8, rotationX: -y*5, x: x*12, y: y*6, duration:0.7, ease:'power3.out' });
-            gsap.to(cards[1], { rotationY: x*6, rotationX: -y*4, x: x*8, y: y*4, duration:0.7, ease:'power3.out' });
-            gsap.to(cards[2], { rotationY: x*4, rotationX: -y*3, x: x*6, y: y*3, duration:0.7, ease:'power3.out' });
-          });
-          stack.addEventListener('mouseleave', ()=> gsap.to(cards, { rotationY:0, rotationX:0, x:0, y:0, duration:0.9, ease:'power3.out' }));
-        }
-      })();
-
-      /* ---------- About reveals ---------- */
-      (function about(){
-        const media = document.querySelector('.about-media');
-        const copy = document.querySelector('.about-copy');
-        gsap.from(media, { opacity:0, x:-80, duration:1.0, ease:'power3.out', scrollTrigger:{ trigger: media, start:'top 85%' } });
-        gsap.from(copy, { opacity:0, x:80, duration:1.0, delay:0.12, ease:'power3.out', scrollTrigger:{ trigger: copy, start:'top 85%' } });
-      })();
-
-      /* ---------- Panels interaction and subtle scrub (not heavy pinning) ---------- */
-      (function panels(){
-        const panels = document.querySelectorAll('.panel');
-        panels.forEach((panel, idx) => {
-          const img = panel.querySelector('img');
-          gsap.from(panel.querySelector('.overlay'), { y:40, autoAlpha:0, duration:1, ease:'power3.out', scrollTrigger:{ trigger: panel, start:'top 90%' } });
-          if(img && !isMobile){
-            gsap.to(img, { scale:1.06, yPercent:-6, ease:'none', scrollTrigger:{ trigger: panel, start:'top 120%', end:'bottom 10%', scrub:true } });
-            // hover transform
-            panel.addEventListener('mouseenter', ()=> gsap.to(img, { scale:1.12, duration:0.9, ease:'power3.out' }) );
-            panel.addEventListener('mouseleave', ()=> gsap.to(img, { scale:1.0, duration:0.9, ease:'power3.out' }) );
-          }
-          // click navigation to placeholder pages
-          panel.addEventListener('click', ()=> {
-            const href = panel.getAttribute('data-href');
-            if(href) window.location.href = href;
-          });
-          panel.addEventListener('keydown', (e)=> { if(e.key==='Enter'){ const href=panel.getAttribute('data-href'); if(href) window.location.href = href; } });
+        // 3D Tilt Effect Script
+        document.querySelectorAll('.tilt-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -5;
+                const rotateY = ((x - centerX) / centerX) * 5;
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+            });
         });
-      })();
 
-      /* ---------- Quote banner fade ---------- */
-      gsap.from('.quote-banner', { autoAlpha:0, y:30, duration:1.0, ease:'power3.out', scrollTrigger:{ trigger:'.quote-banner', start:'top 90%' } });
-
-      /* ---------- CTA reveal ---------- */
-      gsap.from('.cta-wrap h2', { y:40, autoAlpha:0, duration:1.0, scrollTrigger:{ trigger:'.cta-wrap', start:'top 85%' } });
-      gsap.from('.cta-wrap p', { y:30, autoAlpha:0, duration:1.0, delay:0.12, scrollTrigger:{ trigger:'.cta-wrap', start:'top 85%' } });
-
-      /* ---------- Progress bar ---------- */
-      (function progress(){
-        const bar = document.getElementById('progressBar');
-        ScrollTrigger.create({ start:0, end:'bottom bottom', onUpdate: self => { bar.style.transform = `scaleX(${self.progress})`; } });
-      })();
-
-      /* ---------- Keyboard navigation ---------- */
-      (function keys(){
-        const ids = ['hero','about','divisions','contact'];
-        let index = 0;
-        window.addEventListener('keydown', (e)=>{
-          if(e.key==='ArrowDown'){ index = Math.min(index+1, ids.length-1); document.getElementById(ids[index]).scrollIntoView({behavior:'smooth'}); }
-          if(e.key==='ArrowUp'){ index = Math.max(index-1,0); document.getElementById(ids[index]).scrollIntoView({behavior:'smooth'}); }
+        // Scroll Reveals
+        gsap.utils.toArray('.glass-panel').forEach(panel => {
+            gsap.from(panel, {
+                scrollTrigger: { trigger: panel, start: "top 85%" },
+                y: 50, opacity: 0, duration: 1, ease: "power3.out"
+            });
         });
-        ids.forEach((id,i)=> ScrollTrigger.create({ trigger:'#'+id, start:'top center', onEnter:()=> index=i, onEnterBack:()=> index=i }));
-      })();
+    </script>
 
-      /* ---------- Mobile fallbacks ---------- */
-      if(isMobile || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-        // disable heavy infinite animations for battery & CPU
-        gsap.killTweensOf('.card'); // stop infinite float
-      }
 
-    }); // ready done
 
-  })();
-  </script>
-
-  <script async="async" data-cfasync="false" src="//pl28119121.effectivegatecpm.com/03a6d186b6a7b378355861e3b08b6490/invoke.js"></script>
-<div id="container-03a6d186b6a7b378355861e3b08b6490"></div>
-
-<script type='text/javascript' src='//pl28119259.effectivegatecpm.com/ee/3a/53/ee3a53f4d198f93d68415776442149a1.js'></script>
-
+    <script type='text/javascript' src='//pl28119259.effectivegatecpm.com/ee/3a/53/ee3a53f4d198f93d68415776442149a1.js'></script>
 </body>
 </html>
